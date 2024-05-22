@@ -1,0 +1,103 @@
+:root {
+    font-family: 'Courier New', Courier, monospace;
+
+    --base: #f4f3ee;
+    --text: #463f3a;
+
+    --bg-container: #8a817c;
+
+    --clr-border: #bcb8b1;
+
+    --fs-currTime: 4rem;
+    --fs-select: 2rem;
+    --fs-alarm-item: 1rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--base);
+    color: var(--text);
+}
+
+/* header */
+header {
+    text-align: center;
+}
+
+/* main */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* clock section */
+.clockContainer {
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--bg-container);
+    border: 3px solid var(--clr-border);
+}
+.currTimeContainer {
+    font-size: var(--fs-currTime);
+    margin-top: 0;
+}
+
+/* set alarm section */
+#setAlarmForm {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+#setAlarmForm div {
+    display: flex;
+    align-items: center;
+}
+#setAlarmForm select {
+    font-size: var(--fs-select);
+    outline: transparent;
+    background-color: var(--bg-container);
+    border-radius: 5px;
+    color: var(--text);
+    border: none;
+    padding: 0;
+}
+#setAlarmForm select:hover {
+    background-color: var(--clr-border);
+}
+#setAlarmForm select::-webkit-scrollbar {
+    display: none;
+}
+#setAlarmForm span {
+    font-size: var(--fs-select);
+}
+#setAlarmForm button, .alarmItem button {
+    background-color: var(--bg-container);
+    border: 2px solid var(--text);
+    color: var(--text);
+    font-size: var(--fs-select);
+}
+#setAlarmForm button:hover, .alarmItem button:hover {
+    background-color: var(--clr-border);
+}
+#selectPeriod {
+    margin-left: 0.5rem;
+}
+
+/* alarm list */
+.alarmListContainer h2 {
+    display: inline-block;
+    padding-bottom: 0.1rem;
+    border-bottom: 2px solid var(--text);
+}
+#alarmList {
+    margin: 0;
+    padding: 0;
+}
+
+.alarmItem {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-select);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
