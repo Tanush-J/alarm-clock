@@ -39,6 +39,7 @@ main {
 }
 .currTimeContainer {
     font-size: var(--fs-currTime);
+    text-align: center;
     margin-top: 0;
 }
 
